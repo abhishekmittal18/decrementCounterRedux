@@ -4,9 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import {Provider} from 'react-redux';
+import Counter from './components/counter'
+import store from './redux/counterStore'
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <Counter />
+    </Provider>
+    
   </React.StrictMode>,
   document.getElementById('root')
 );
